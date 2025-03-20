@@ -53,6 +53,10 @@ class Post {
 	 * @param string $url Target URL.
 	 */
 	public function parse_url( string $url ) {
+		if ( ! filter_var( $url, FILTER_VALIDATE_URL ) ) {
+			return false;
+		}
+	
 		$parsed_url = parse_url( $url );
 		$url        = $parsed_url['scheme'] . '://' . $parsed_url['host'];
 		if ( isset( $parsed_url['path'] ) ) {
