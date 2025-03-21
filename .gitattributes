@@ -1,6 +1,0 @@
-README.md export-ignore
-yarn.lock export-ignore
-phpunit.xml export-ignore
-renovate.json export-ignore
-tests/ export-ignore
-bin/ export-ignore
